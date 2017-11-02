@@ -13,7 +13,6 @@ var AutorizationTokenSchema = new mongoose.Schema({
     }
 });
 
-
 /**
  * Pre-save hook
  */
@@ -23,6 +22,5 @@ AutorizationTokenSchema.pre('save', function(next) {
     this.userId = undefined;
     next();
 });
-
 
 module.exports = mongoose.model('AutorizationToken', AutorizationTokenSchema);
